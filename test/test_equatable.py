@@ -1,5 +1,5 @@
 import unittest
-from src.python_equatable import Equatable
+from src.equatable import Equatable
 
 
 class WithoutEquatable:

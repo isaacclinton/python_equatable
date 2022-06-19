@@ -1,5 +1,11 @@
-import unittest
-from src.python_equatable import Equatable
+# Python Equatable
+
+Enables comparison of objects of the same class using class attributes only
+
+## Defining the classes
+
+```python
+from python_equatable import equatable
 
 
 class WithoutEquatable:
@@ -29,6 +35,11 @@ class WithEquatableB(Equatable):
         return [self.num, self.letters]
 
 
+```
+## Testing
+```python
+import unittest
+
 class TestEquatable(unittest.TestCase):
 
     def test_equals(self):
@@ -45,3 +56,5 @@ class TestEquatable(unittest.TestCase):
         with_equatable_1 = WithEquatableB(5, "Hello")
         with_equatable_2 = WithEquatableA(5, "Hello")
         self.assertNotEqual(with_equatable_1, with_equatable_2)
+
+```
